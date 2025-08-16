@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Voice E‑commerce Agent</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🛍️ Voice E‑commerce Agent</h1>
+      <span id="status" class="small">disconnected</span>
+    </header>
+    <main class="container">
+      <section class="panel">
+        <h2>Controls</h2>
+        <div class="controls">
+          <button id="connectBtn">Connect & Start Mic</button>
+          <button id="stopBtn" class="secondary">Stop</button>
+          <label class="small"><input type="checkbox" id="subtitles" checked> Show live transcription</label>
+        </div>
+        <audio id="assistantAudio" autoplay playsinline></audio>
+        <div class="small">Assistant will speak back to you.</div>
+        <h2>Live transcription</h2>
+        <div id="transcript" class="transcript"></div>
+        <h2>Assistant</h2>
+        <div id="assistant" class="assistant"></div>
+      </section>
+
+      <aside class="panel">
+        <h2>Products</h2>
+        <div id="products" class="grid"></div>
+        <h2>Debug log</h2>
+        <div id="log" class="log"></div>
+      </aside>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
